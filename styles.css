@@ -1,0 +1,72 @@
+
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+html, body {
+    margin: 0px;
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+}
+
+body {
+    font-family: Raleway;
+    background: #f44336;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+}
+
+div.container.red {
+    padding: 3em;
+    text-align: center;
+}
+
+div.container.red a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0 10px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block; /* Make the links display in a line */
+}
+
+/* Top and Bottom borders go out for Red Portfolio Page */
+div.red a:before,
+div.red a:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.red a:before {
+    top: 0;
+    transform: translateY(10px);
+}
+
+div.red a:after {
+    bottom: 0;
+    transform: translateY(-10px);
+}
+
+div.red a:hover:before,
+div.red a:hover:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer span {
+    color: #AAA;
+}
